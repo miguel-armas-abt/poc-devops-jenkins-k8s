@@ -4,10 +4,8 @@ source ./commons.sh
 source ./variables.env
 
 DESTINATIONS=(
-#  "$JENKINS_SETTINGS_SCRAPING_PATH/src/main/resources/drivers"
-#  "$JENKINS_PIPELINE_CREATION_SCRAPING_PATH/src/main/resources/drivers"
-  "path1/src/main/resources/drivers"
-  "path2/src/main/resources/drivers"
+  "$JENKINS_SETTINGS_SCRAPING_PATH/src/main/resources/drivers"
+  "$JENKINS_PIPELINE_CREATION_SCRAPING_PATH/src/main/resources/drivers"
 )
 
 PLATFORM="win64"
@@ -30,7 +28,7 @@ get_latest_chromedriver_url() {
     ".channels.\"$CHANNEL\".downloads.chromedriver[] | select(.platform == \"$PLATFORM\") | .url")
 
   if [ -z "$url" ]; then
-    echo -e "${RED}Couldn't get ChromeDriver URL for $PLATFORM ${NC}"
+    echo -e "${RED}Couldn't get chromedriver URL for $PLATFORM ${NC}"
     exit 1
   fi
 
@@ -53,7 +51,7 @@ download_and_unzip_chromedriver() {
 get_chromedriver_path() {
   local path=$(find . -type f -name "chromedriver.exe" | head -n 1)
   if [ ! -f "$path" ]; then
-    echo -e "${RED}chromedriver executable not found${NC}"
+    echo -e "${RED}chromedriver.exe not found${NC}"
     exit 1
   fi
   echo "$path"
@@ -63,7 +61,7 @@ copy_to_destinations() {
   local path=$1
   for dest in "${DESTINATIONS[@]}"; do
     cp "$path" "$dest/"
-    echo -e "${GREEN}ChromeDriver updated in: $dest ${NC}"
+    echo -e "${GREEN}chromedriver.exe updated in: $dest ${NC}"
   done
 }
 

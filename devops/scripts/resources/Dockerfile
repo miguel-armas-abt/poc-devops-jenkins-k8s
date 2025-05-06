@@ -1,6 +1,6 @@
 FROM jenkins/jenkins:2.484
 USER root
-#Define variables
+
 ENV MAVEN_VERSION=3.9.6
 
 #Update Base OS and install additional tools
