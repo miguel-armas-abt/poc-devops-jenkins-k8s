@@ -9,8 +9,8 @@ generate_jenkinsfile() {
 
   mkdir -p "$component_path"
 
-  k8s_credential_id=$(yq '.configuration.k8s.credentials.id' "$JENKINS_SCRAPING_FILE")
-  k8s_cloud_server_url=$(yq '.configuration.k8s.cloud.forwardedServerUrl' "$JENKINS_SCRAPING_FILE")
+  k8s_credential_id=$(yq '.configuration.k8s.credentials.id' "$JENKINS_SETTINGS_SCRAPING_FILE")
+  k8s_cloud_server_url=$(yq '.configuration.k8s.cloud.forwardedServerUrl' "$JENKINS_SETTINGS_SCRAPING_FILE")
 
   template=""
   if [[ -f "$component_path/pom.xml" ]]; then
