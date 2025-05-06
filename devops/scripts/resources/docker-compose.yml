@@ -1,0 +1,36 @@
+version: '3.1'
+services:
+  devops-jenkins:
+    container_name: devops-jenkins
+    image: miguelarmasabt/devops-jenkins:v1.0.1
+    restart: on-failure
+    ports:
+      - "8181:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - devops-network
+  devops-sonarqube:
+    container_name: devops-sonarqube
+    image: sonarqube:8.7.1-community
+    restart: on-failure
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+    networks:
+      - devops-network
+volumes:
+  jenkins_home:
+networks:
+  devops-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24
+          gateway: 172.18.0.1
+        - subnet: "2001:3974:3979::/64"
+          gateway: "2001:3974:3979::1"
