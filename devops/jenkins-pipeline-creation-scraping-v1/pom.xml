@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo.poc.scraping</groupId>
-    <artifactId>jenkins-pipelines-scraping-v1</artifactId>
+    <artifactId>jenkins-pipeline-creation-scraping-v1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
