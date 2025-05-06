@@ -28,15 +28,5 @@ install_jenkins_settings_scrapping() {
   cd "$original_dir"
 }
 
-handle_deploy() {
-  ./docker-commands.sh build-image
-  ./docker-commands.sh up-compose
-  ./docker-commands.sh wait-container
-
-  ./scraping-settings-filler.sh
-
-  install_jenkins_settings_scrapping
-  execute_jenkins_settings_scrapping
-}
-
-handle_deploy
+install_jenkins_settings_scrapping
+execute_jenkins_settings_scrapping
