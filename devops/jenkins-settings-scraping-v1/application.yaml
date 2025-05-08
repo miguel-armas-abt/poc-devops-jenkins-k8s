@@ -4,7 +4,7 @@ configuration:
   waitingTimeAfterSuggestedPlugins: 11000
   waitingTimeAfterRestart: 25000
   login:
-    unlockPassword: 935d1c1fdaf940759947d54f6dd02cf7
+    unlockPassword: 9f87fdb41dfa45c3a885bc4e28ea5b36
     uri: http://localhost:8181/
     username: poc-user
     password: qwerty
@@ -17,5 +17,5 @@ configuration:
     cloud:
       name: poc-kubernetes
       certificate: C:\Users\User\.minikube\ca.crt
-      localServerUrl: https://127.0.0.1:30476
-      forwardedServerUrl: https://d244-179-6-4-43.ngrok-free.app
+      localServerUrl: https://127.0.0.1:50851
+      forwardedServerUrl: https://41cf-2800-200-ed50-2d5-159e-b87-f1e5-8a23.ngrok-free.app

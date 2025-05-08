@@ -1,25 +1,32 @@
 #!/bin/bash
+set -e
 
 source ./commons.sh
 source ./variables.env
 
+SCRIPT_NAME="${BASH_SOURCE[0]}"
+print_timestamp "$SCRIPT_NAME started"
+
 wait_for_container() {
   local container_name=$1
-  local max_retries=60
+  local max_retries=$JENKINS_WAIT_RETRIES
   local retries=0
 
-  until [ "$(docker inspect -f '{{.State.Health.Status}}' "$container_name" 2>/dev/null)" == "healthy" ]; do
-      if [ $retries -ge $max_retries ]; then
-        echo -e "${RED}Timeout${NC}"
-        return 1
-      fi
+  until [[ "$(is_container_running "$container_name")" == "true" ]]; do
+    if [ $retries -ge "$max_retries" ]; then
+      printf "\n"
+      echo -e "${RED}timeout waiting for $container_name${NC}"
+      return 1
+    fi
 
-      arrow_loader "Waiting for container $container_name"
-
-      retries=$((retries + 1))
-      sleep 0.5
+    arrow_loader "waiting for container $container_name"
+    retries=$((retries + 1))
+    sleep 0.5
   done
 
+  sleep "$JENKINS_STARTUP_DELAY"
+  printf "\n"
+  echo -e "${GREEN}$container_name is running${NC}"
   return 0
 }
 
@@ -34,43 +41,37 @@ validate_operation() {
     fi
   done
 
-  echo "El valor de la operación debe coincidir con: ${valid_operations[*]}"
+  echo "operation must be match: ${valid_operations[*]}"
   return 1
 }
 
 process_operation() {
     local operation=$1
-
-    connect_minikube="docker network connect minikube $JENKINS_IMAGE"
-    disconnect_minikube="docker network disconnect minikube $JENKINS_IMAGE"
-
-    image="$JENKINS_REPOSITORY/$JENKINS_IMAGE:$JENKINS_TAG"
-
-    command="clear"
+    image="$JENKINS_REPOSITORY/$JENKINS_CONTAINER_NAME:$JENKINS_TAG"
 
     if [[ $operation == "build-image" ]]; then
-      command="docker build -f $JENKINS_DOCKERFILE -t $image --no-cache ."
+      command="docker build -f $JENKINS_DOCKERFILE -t $image ."
+      print_and_eval "$command"
     fi
 
     if [[ $operation == "up-compose" ]]; then
       #-d: in background
       command="docker-compose -f $JENKINS_DOCKER_COMPOSE_FILE up -d"
-      eval "$connect_minikube"
+      print_and_eval "$command"
+      command="docker network connect minikube $JENKINS_CONTAINER_NAME"
+      print_and_eval "$command"
     fi
 
     if [[ $operation == "delete-compose" ]]; then
-      eval "$disconnect_minikube"
+      command="docker network disconnect minikube $JENKINS_CONTAINER_NAME"
+      print_and_eval "$command"
       command="docker-compose -f $JENKINS_DOCKER_COMPOSE_FILE down -v"
+      print_and_eval "$command"
     fi
 
     if [[ $operation == "wait-container" ]]; then
-      container=$(docker ps --filter ancestor="$image" --format "{{.Names}}" | head -n 1)
-      echo -e "Wait for container ${YELLOW}$container${NC}"
-      wait_for_container "$container"
+      wait_for_container "$JENKINS_CONTAINER_NAME"
     fi
-
-    echo "$(get_timestamp) .......... $command" >> "./../../$LOG_FILE"
-    eval "$command"
 }
 
 operation=$1

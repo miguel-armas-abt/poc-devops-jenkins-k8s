@@ -1,7 +1,11 @@
 #!/bin/bash
+set -e
 
 source ./commons.sh
 source ./variables.env
+
+SCRIPT_NAME="${BASH_SOURCE[0]}"
+print_timestamp "$SCRIPT_NAME started"
 
 DESTINATIONS=(
   "$JENKINS_SETTINGS_SCRAPING_PATH/src/main/resources/drivers"
@@ -11,6 +15,8 @@ DESTINATIONS=(
 PLATFORM="win64"
 CHANNEL="Stable"
 ZIP_FILE="chromedriver.zip"
+
+
 
 create_destination_folders() {
   for dest in "${DESTINATIONS[@]}"; do
