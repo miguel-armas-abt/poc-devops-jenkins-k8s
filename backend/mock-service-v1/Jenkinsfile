@@ -4,7 +4,7 @@ pipeline {
         stage('Compile') {
             steps {
                 script {
-                    def rootDir = "backend/@component_name"
+                    def rootDir = "backend/mock-service-v1"
                     echo "Changing directory to: ${rootDir}"
                     dir(rootDir) {
                         sh "ls -la"
@@ -21,8 +21,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                withCredentials(bindings: [ string(credentialsId: '@k8s_credential_id', variable: 'api_token') ]) {
-                    sh 'kubectl apply -f backend/@component_name/k8s.yaml --server @k8s_cloud_server_url --token $api_token --insecure-skip-tls-verify=true'
+                withCredentials(bindings: [ string(credentialsId: 'k8s-cluster-token', variable: 'api_token') ]) {
+                    sh 'kubectl apply -f backend/mock-service-v1/k8s.yaml --server https://f4c9-2800-200-ed50-2d5-f94d-c6d4-a11f-1684.ngrok-free.app --token $api_token --insecure-skip-tls-verify=true'
                 }
             }
         }

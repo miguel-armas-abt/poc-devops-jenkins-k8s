@@ -24,7 +24,6 @@ generate_jenkinsfile() {
   fi
 
   jenkinsfile=$(<"$template")
-  jenkinsfile="${jenkinsfile//@component_type/$component_type}"
   jenkinsfile="${jenkinsfile//@component_name/$component_name}"
   jenkinsfile="${jenkinsfile//@k8s_credential_id/$k8s_credential_id}"
   jenkinsfile="${jenkinsfile//@k8s_cloud_server_url/$k8s_cloud_server_url}"
