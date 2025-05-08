@@ -12,7 +12,8 @@ public enum OperationType {
   INSTALL_K8S_PLUGIN("Instalación del plugin K8S"),
   LOGIN("Inicio de sesión"),
   ADD_K8S_CREDENTIALS("Agregar nueva credencial de K8S"),
-  CONFIG_K8S_CLOUD("Configurar K8S cloud");
+  CONFIG_K8S_CLOUD("Configurar K8S cloud"),
+  PIPELINE_CREATION("Creación de pipeline"),;
 
   private final String description;
 

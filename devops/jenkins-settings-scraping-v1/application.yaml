@@ -21,3 +21,9 @@ configuration:
     openBrowser: 1750
     afterSuggestedPlugins: 9500
     afterK8sPlugins: 115000
+  newPipeline:
+    name: mock-service-v1
+    githubProject: https://github.com/miguel-armas-abt/poc-devops-jenkins-k8s
+    repositoryUrl: https://miguel-armas-abt:<github-access-token>@github.com/miguel-armas-abt/poc-devops-jenkins-k8s
+    branch: "*/main"
+    jenkinsFilePath: backend/mock-service-v1/Jenkinsfile

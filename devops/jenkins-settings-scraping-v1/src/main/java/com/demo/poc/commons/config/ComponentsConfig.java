@@ -11,6 +11,8 @@ import com.demo.poc.entrypoint.k8splugin.service.InstallK8SPluginService;
 import com.demo.poc.entrypoint.k8splugin.spider.InstallK8sPluginSpider;
 import com.demo.poc.entrypoint.login.service.LoginService;
 import com.demo.poc.entrypoint.login.spider.LoginSpider;
+import com.demo.poc.entrypoint.pipeline.service.PipelineCreationService;
+import com.demo.poc.entrypoint.pipeline.spider.PipelineCreationSpider;
 import com.demo.poc.entrypoint.unlock.service.InitialUnlockService;
 import com.demo.poc.entrypoint.unlock.spider.SuggestedPluginSpider;
 import com.demo.poc.entrypoint.unlock.spider.UnlockSpider;
@@ -52,5 +54,9 @@ public class ComponentsConfig extends AbstractModule {
     //config k8s cloud
     binderSet.addBinding().to(ConfigK8sCloudService.class);
     bind(ConfigK8sCloudSpider.class);
+
+    //create pipeline
+    binderSet.addBinding().to(PipelineCreationService.class);
+    bind(PipelineCreationSpider.class);
   }
 }

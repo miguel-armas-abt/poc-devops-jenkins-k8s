@@ -12,4 +12,5 @@ public class Configuration {
   private Login login;
   private K8s k8s;
   private Delay delay;
+  private Pipeline newPipeline;
 }
