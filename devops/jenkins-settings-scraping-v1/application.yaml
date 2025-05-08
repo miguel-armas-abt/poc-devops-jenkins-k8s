@@ -1,10 +1,7 @@
 configuration:
   driverPath: src/main/resources/drivers/chromedriver.exe
-  waitingTimeMillis: 1000
-  waitingTimeAfterSuggestedPlugins: 11000
-  waitingTimeAfterRestart: 25000
   login:
-    unlockPassword: 9f87fdb41dfa45c3a885bc4e28ea5b36
+    unlockPassword: 244e9ce5a19d4e479902e41f880444bf
     uri: http://localhost:8181/
     username: poc-user
     password: qwerty
@@ -17,5 +14,10 @@ configuration:
     cloud:
       name: poc-kubernetes
       certificate: C:\Users\User\.minikube\ca.crt
-      localServerUrl: https://127.0.0.1:50851
-      forwardedServerUrl: https://41cf-2800-200-ed50-2d5-159e-b87-f1e5-8a23.ngrok-free.app
+      localServerUrl: https://127.0.0.1:31019
+      forwardedServerUrl: https://f4c9-2800-200-ed50-2d5-f94d-c6d4-a11f-1684.ngrok-free.app
+  delay:
+    basic: 1000
+    openBrowser: 1750
+    afterSuggestedPlugins: 9500
+    afterK8sPlugins: 115000

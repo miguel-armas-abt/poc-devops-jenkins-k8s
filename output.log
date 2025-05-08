@@ -1,0 +1,207 @@
+ 7:01:27:790PM .......... ./docker-commands.sh started
+ 7:02:17:130PM .......... ./jenkins-init-service.sh started
+ 7:02:17:165PM .......... ./docker-commands.sh started
+ 7:02:17:179PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 7:02:18:707PM .......... ./docker-commands.sh started
+ 7:02:18:720PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 7:02:19:200PM .......... docker network connect minikube devops-jenkins
+ 7:02:19:509PM .......... ./docker-commands.sh started
+ 7:02:19:882PM .......... devops-jenkins is running: true
+ 7:02:19:942PM .......... ./scraping-settings-filler.sh started
+ 7:13:08:125PM .......... ./docker-commands.sh started
+ 7:13:08:139PM .......... docker network disconnect minikube devops-jenkins
+ 7:13:08:491PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 7:13:34:794PM .......... ./docker-commands.sh started
+ 7:17:23:230PM .......... ./docker-commands.sh started
+ 7:22:44:693PM .......... ./docker-commands.sh started
+ 7:33:00:917PM .......... ./scraping-settings-filler.sh started
+ 7:41:29:501PM .......... ./docker-commands.sh started
+ 7:41:29:514PM .......... docker network disconnect minikube devops-jenkins
+ 7:41:33:377PM .......... ./docker-commands.sh started
+ 7:41:33:391PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 7:41:34:828PM .......... ./docker-commands.sh started
+ 7:41:34:842PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 7:41:35:311PM .......... docker network connect minikube devops-jenkins
+ 7:41:35:607PM .......... ./docker-commands.sh started
+ 7:41:35:800PM .......... devops-jenkins is running: true
+ 7:41:39:870PM .......... ./scraping-settings-filler.sh started
+ 7:41:40:013PM .......... devops-jenkins is running: true
+ 7:43:00:259PM .......... ./docker-commands.sh started
+ 7:43:00:273PM .......... docker network disconnect minikube devops-jenkins
+ 7:43:00:623PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 7:43:32:497PM .......... ./docker-commands.sh started
+ 7:43:32:510PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 7:43:33:466PM .......... ./docker-commands.sh started
+ 7:43:33:479PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 7:43:34:073PM .......... docker network connect minikube devops-jenkins
+ 7:43:34:359PM .......... ./docker-commands.sh started
+ 7:43:34:571PM .......... devops-jenkins is running: true
+ 7:43:38:650PM .......... ./scraping-settings-filler.sh started
+ 7:43:38:792PM .......... devops-jenkins is running: true
+ 7:46:02:242PM .......... ./scraping-settings-filler.sh started
+ 7:46:48:340PM .......... ./scraping-settings-filler.sh started
+ 7:47:05:078PM .......... ./scraping-settings-filler.sh started
+ 7:47:56:889PM .......... ./scraping-settings-filler.sh started
+ 7:48:28:904PM .......... ./scraping-settings-filler.sh started
+ 7:49:23:919PM .......... ./scraping-settings-filler.sh started
+ 7:50:15:077PM .......... ./scraping-settings-filler.sh started
+ 7:50:32:164PM .......... ./scraping-settings-filler.sh started
+ 7:50:32:178PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:50851
+ 7:55:54:350PM .......... ./docker-commands.sh started
+ 7:55:54:366PM .......... docker network disconnect minikube devops-jenkins
+ 7:55:54:761PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 7:56:09:463PM .......... ./docker-commands.sh started
+ 7:56:09:477PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 7:56:10:880PM .......... ./docker-commands.sh started
+ 7:56:10:894PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 7:56:11:386PM .......... docker network connect minikube devops-jenkins
+ 7:56:11:684PM .......... ./docker-commands.sh started
+ 7:56:11:879PM .......... devops-jenkins is running: true
+ 7:56:15:958PM .......... ./scraping-settings-filler.sh started
+ 7:56:16:106PM .......... devops-jenkins is running: true
+ 7:56:16:975PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:50851
+ 7:56:53:916PM .......... ./jenkins-scraping-config-service.sh started
+ 7:56:53:949PM .......... ./chromedriver-downloader.sh started
+ 7:56:57:064PM .......... mvn clean install -Dmaven.home="C:/dev-environment/maven/apache-maven-3.9.1" -Dmaven.repo.local="C:/Users/User/.m2/repository"
+ 7:57:16:196PM .......... C:/dev-environment/java/jdk-17/bin/java -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 7:59:30:577PM .......... ./jenkins-scraping-config-service.sh started
+ 7:59:30:612PM .......... ./chromedriver-downloader.sh started
+ 7:59:33:327PM .......... mvn clean install -Dmaven.home="C:/dev-environment/maven/apache-maven-3.9.1" -Dmaven.repo.local="C:/Users/User/.m2/repository"
+ 7:59:41:234PM .......... C:/dev-environment/java/jdk-17/bin/java -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 4:22:28:223PM .......... ./docker-commands.sh started
+ 4:22:28:240PM .......... docker network disconnect minikube devops-jenkins
+ 4:23:30:882PM .......... ./docker-commands.sh started
+ 4:23:30:896PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 4:23:32:558PM .......... ./docker-commands.sh started
+ 4:23:32:572PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 4:23:33:051PM .......... docker network connect minikube devops-jenkins
+ 4:23:33:307PM .......... ./docker-commands.sh started
+ 4:23:33:494PM .......... devops-jenkins is running: true
+ 4:23:37:628PM .......... ./scraping-settings-filler.sh started
+ 4:23:37:795PM .......... devops-jenkins is running: true
+ 4:23:38:958PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:31019
+ 5:11:21:152PM .......... ./jenkins-scraping-config-service.sh started
+ 5:11:21:201PM .......... ./chromedriver-downloader.sh started
+ 5:27:52:751PM .......... ./jenkins-scraping-config-service.sh started
+ 5:27:52:784PM .......... ./chromedriver-downloader.sh started
+ 5:27:56:017PM .......... mvn clean install -Dmaven.home="C:/dev-environment/maven/apache-maven-3.9.1" -Dmaven.repo.local="C:/Users/User/.m2/repository"
+ 5:28:06:286PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:39:31:949PM .......... ./jenkins-scraping-config-service.sh started
+ 5:39:31:987PM .......... ./chromedriver-downloader.sh started
+ 5:41:09:645PM .......... ./jenkins-scraping-config-service.sh started
+ 5:41:09:678PM .......... ./chromedriver-downloader.sh started
+ 5:41:12:487PM .......... mvn clean install -Dmaven.home="C:/dev-environment/maven/apache-maven-3.9.1" -Dmaven.repo.local="C:/Users/User/.m2/repository"
+ 5:41:20:487PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:43:30:869PM .......... ./docker-commands.sh started
+ 5:43:30:883PM .......... docker network disconnect minikube devops-jenkins
+ 5:43:31:246PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 5:44:17:690PM .......... ./docker-commands.sh started
+ 5:44:17:704PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 5:44:19:385PM .......... ./docker-commands.sh started
+ 5:44:19:399PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 5:44:19:831PM .......... docker network connect minikube devops-jenkins
+ 5:44:20:086PM .......... ./docker-commands.sh started
+ 5:44:20:284PM .......... devops-jenkins is running: true
+ 5:44:24:363PM .......... ./scraping-settings-filler.sh started
+ 5:44:24:547PM .......... devops-jenkins is running: true
+ 5:44:25:471PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:31019
+ 5:44:32:194PM .......... ./jenkins-scraping-config-service.sh started
+ 5:44:32:246PM .......... ./chromedriver-downloader.sh started
+ 5:44:35:437PM .......... mvn clean install -Dmaven.home="C:/dev-environment/maven/apache-maven-3.9.1" -Dmaven.repo.local="C:/Users/User/.m2/repository"
+ 5:44:45:544PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:47:49:347PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INSTALL_K8S_PLUGIN -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:48:24:123PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=ADD_K8S_CREDENTIALS -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:52:44:758PM .......... ./docker-commands.sh started
+ 5:52:44:773PM .......... docker network disconnect minikube devops-jenkins
+ 5:52:45:129PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 5:52:55:604PM .......... ./docker-commands.sh started
+ 5:52:55:618PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 5:52:56:958PM .......... ./docker-commands.sh started
+ 5:52:56:971PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 5:52:57:436PM .......... docker network connect minikube devops-jenkins
+ 5:52:57:683PM .......... ./docker-commands.sh started
+ 5:52:57:874PM .......... devops-jenkins is running: true
+ 5:53:01:964PM .......... ./scraping-settings-filler.sh started
+ 5:53:02:109PM .......... devops-jenkins is running: true
+ 5:53:02:944PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:31019
+ 5:53:12:104PM .......... ./jenkins-scraping-config-service.sh started
+ 5:53:12:143PM .......... ./chromedriver-downloader.sh started
+ 5:53:15:294PM .......... mvn clean install -Dmaven.home="C:/dev-environment/maven/apache-maven-3.9.1" -Dmaven.repo.local="C:/Users/User/.m2/repository"
+ 5:53:24:759PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:54:39:900PM .......... ./docker-commands.sh started
+ 5:54:39:914PM .......... docker network disconnect minikube devops-jenkins
+ 5:54:40:325PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 5:54:51:945PM .......... ./docker-commands.sh started
+ 5:54:51:958PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 5:54:52:908PM .......... ./docker-commands.sh started
+ 5:54:52:923PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 5:54:53:498PM .......... docker network connect minikube devops-jenkins
+ 5:54:53:766PM .......... ./docker-commands.sh started
+ 5:54:53:965PM .......... devops-jenkins is running: true
+ 5:54:58:041PM .......... ./scraping-settings-filler.sh started
+ 5:54:58:189PM .......... devops-jenkins is running: true
+ 5:54:59:054PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:31019
+ 5:55:07:124PM .......... ./jenkins-scraping-config-service.sh started
+ 5:55:07:167PM .......... ./chromedriver-downloader.sh started
+ 5:55:10:297PM .......... mvn clean install -Dmaven.home="C:/dev-environment/maven/apache-maven-3.9.1" -Dmaven.repo.local="C:/Users/User/.m2/repository"
+ 5:55:20:067PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:58:27:626PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INSTALL_K8S_PLUGIN -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 5:59:02:394PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=ADD_K8S_CREDENTIALS -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:06:18:013PM .......... ./docker-commands.sh started
+ 6:06:18:026PM .......... docker network disconnect minikube devops-jenkins
+ 6:06:18:408PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 6:06:30:005PM .......... ./docker-commands.sh started
+ 6:06:30:018PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 6:06:31:541PM .......... ./docker-commands.sh started
+ 6:06:31:556PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 6:06:32:003PM .......... docker network connect minikube devops-jenkins
+ 6:06:32:263PM .......... ./docker-commands.sh started
+ 6:06:32:463PM .......... devops-jenkins is running: true
+ 6:06:36:548PM .......... ./scraping-settings-filler.sh started
+ 6:06:36:710PM .......... devops-jenkins is running: true
+ 6:06:37:619PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:31019
+ 6:06:47:232PM .......... ./jenkins-scraping-config-service.sh started
+ 6:06:47:268PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:09:28:095PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INSTALL_K8S_PLUGIN -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:10:07:850PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=ADD_K8S_CREDENTIALS -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:10:18:234PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=CONFIG_K8S_CLOUD -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:11:32:795PM .......... ./docker-commands.sh started
+ 6:11:32:809PM .......... docker network disconnect minikube devops-jenkins
+ 6:11:33:170PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 6:15:11:868PM .......... ./docker-commands.sh started
+ 6:15:11:882PM .......... docker network disconnect minikube devops-jenkins
+ 6:15:17:111PM .......... ./docker-commands.sh started
+ 6:15:17:127PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 6:15:18:467PM .......... ./docker-commands.sh started
+ 6:15:18:481PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 6:15:18:941PM .......... docker network connect minikube devops-jenkins
+ 6:15:19:186PM .......... ./docker-commands.sh started
+ 6:15:19:374PM .......... devops-jenkins is running: true
+ 6:15:23:444PM .......... ./scraping-settings-filler.sh started
+ 6:15:23:587PM .......... devops-jenkins is running: true
+ 6:15:24:427PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:31019
+ 6:15:45:349PM .......... ./jenkins-scraping-config-service.sh started
+ 6:15:45:370PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:18:21:223PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INSTALL_K8S_PLUGIN -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:19:15:101PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=ADD_K8S_CREDENTIALS -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:19:24:651PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=CONFIG_K8S_CLOUD -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:19:49:184PM .......... ./docker-commands.sh started
+ 6:19:49:198PM .......... docker network disconnect minikube devops-jenkins
+ 6:19:49:608PM .......... docker-compose -f ./resources/docker-compose.yml down -v
+ 6:22:06:859PM .......... ./docker-commands.sh started
+ 6:22:06:872PM .......... docker network disconnect minikube devops-jenkins
+ 6:22:09:532PM .......... ./docker-commands.sh started
+ 6:22:09:545PM .......... docker build -f ./resources/Dockerfile -t miguelarmasabt/devops-jenkins:v1.0.1 .
+ 6:22:10:858PM .......... ./docker-commands.sh started
+ 6:22:10:873PM .......... docker-compose -f ./resources/docker-compose.yml up -d
+ 6:22:11:340PM .......... docker network connect minikube devops-jenkins
+ 6:22:11:589PM .......... ./docker-commands.sh started
+ 6:22:11:787PM .......... devops-jenkins is running: true
+ 6:22:15:871PM .......... ./scraping-settings-filler.sh started
+ 6:22:16:028PM .......... devops-jenkins is running: true
+ 6:22:16:883PM .......... C:/dev-environment/ngrok-v3/ngrok http https://127.0.0.1:31019
+ 6:22:22:863PM .......... ./jenkins-scraping-config-service.sh started
+ 6:22:22:885PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INITIAL_UNLOCK -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:25:37:125PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INSTALL_K8S_PLUGIN -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:27:46:082PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=ADD_K8S_CREDENTIALS -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:27:56:681PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=CONFIG_K8S_CLOUD -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
