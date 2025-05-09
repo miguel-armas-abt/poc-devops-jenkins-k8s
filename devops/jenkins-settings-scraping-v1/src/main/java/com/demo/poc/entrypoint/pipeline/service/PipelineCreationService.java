@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @RequiredArgsConstructor(onConstructor = @__(@Inject))
 public class PipelineCreationService implements OperationService {
 
-  private static final OperationType OPERATION = OperationType.INSTALL_K8S_PLUGIN;
+  private static final OperationType OPERATION = OperationType.PIPELINE_CREATION;
 
   private final DriverHelper driverHelper;
   private final LoginSpider loginSpider;
@@ -29,6 +29,6 @@ public class PipelineCreationService implements OperationService {
 
   @Override
   public boolean supports(OperationType operation) {
-    return false;
+    return OPERATION.equals(operation);
   }
 }

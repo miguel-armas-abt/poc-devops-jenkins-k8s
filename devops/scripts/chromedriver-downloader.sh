@@ -9,7 +9,6 @@ print_timestamp "$SCRIPT_NAME started"
 
 DESTINATIONS=(
   "$JENKINS_SETTINGS_SCRAPING_PATH/src/main/resources/drivers"
-  "$JENKINS_PIPELINE_CREATION_SCRAPING_PATH/src/main/resources/drivers"
 )
 
 PLATFORM="win64"

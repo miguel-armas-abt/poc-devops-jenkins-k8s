@@ -205,3 +205,7 @@
  6:25:37:125PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=INSTALL_K8S_PLUGIN -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
  6:27:46:082PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=ADD_K8S_CREDENTIALS -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
  6:27:56:681PM .......... C:/dev-environment/java/jdk-17/bin/java -Doperation=CONFIG_K8S_CLOUD -jar ./target/jenkins-settings-scraping-v1-0.0.1-SNAPSHOT.jar
+ 6:46:58:852PM .......... ./jenkinsfile-csv-processor.sh started
+ 6:48:08:933PM .......... ./jenkinsfile-csv-processor.sh started
+ 6:49:31:566PM .......... ./jenkinsfile-csv-processor.sh started
+ 6:50:59:070PM .......... ./jenkinsfile-csv-processor.sh started
