@@ -21,11 +21,11 @@ public class Main {
     OperationSelectorService selectorService = injector.getInstance(OperationSelectorService.class);
     String operation = System.getProperty(OPERATION_PROPERTY);
 
-//    if(Objects.isNull(operation) || operation.isBlank())
-//      throw new RuntimeException("operation cannot be null");
+    if(Objects.isNull(operation) || operation.isBlank())
+      throw new RuntimeException("operation cannot be null");
 
     log.info(Color.GREEN + "operation: {}" + Color.RESET, operation);
-    OperationService operationService = selectorService.selectService("PIPELINE_CREATION");
+    OperationService operationService = selectorService.selectService(operation);
     operationService.execute();
   }
 }
