@@ -7,7 +7,7 @@ source ./variables.env
 SCRIPT_NAME="${BASH_SOURCE[0]}"
 print_log "$SCRIPT_NAME started"
 
-execute_jenkins_scrapping() {
+execute_scrapping() {
   local operation=$1
 
   local original_dir
@@ -23,4 +23,4 @@ execute_jenkins_scrapping() {
 }
 
 operation=$1
-execute_jenkins_scrapping "$operation"
+execute_scrapping "$operation"
