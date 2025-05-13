@@ -5,14 +5,14 @@ source ./commons.sh
 source ./variables.env
 
 SCRIPT_NAME="${BASH_SOURCE[0]}"
-print_timestamp "$SCRIPT_NAME started"
+print_log "$SCRIPT_NAME started"
 
 forward_to_public_cluster_server() {
   local local_cluster_server=$1
 
   echo -e "${PURPLE}You need to have a stable version of ngrok!${NC}"
   command="$NGROK_EXE http $local_cluster_server"
-  print_to_file "$command"
+  print_log "$command"
   eval start "$command"
   sleep 2
 

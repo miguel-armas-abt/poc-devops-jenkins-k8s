@@ -5,7 +5,7 @@ source ./commons.sh
 source ./variables.env
 
 SCRIPT_NAME="${BASH_SOURCE[0]}"
-print_timestamp "$SCRIPT_NAME started"
+print_log "$SCRIPT_NAME started"
 
 generate_jenkinsfile() {
   local component_name=$1

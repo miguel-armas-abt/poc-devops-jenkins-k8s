@@ -10,4 +10,4 @@ Servicio de mocks que simula APIs RESTful.
 - El directorio `devops` contiene los scripts para inicializar Jenkins y crear pipelines.
 - La solución aplica el siguiente flujo de DevOps.
 
-<img src="./diagrams.svg" width="400" height="280">
+<img src="./diagrams.svg" width="600" height="300">

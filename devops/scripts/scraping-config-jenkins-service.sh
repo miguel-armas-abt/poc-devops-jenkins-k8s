@@ -5,14 +5,14 @@ source ./commons.sh
 source ./variables.env
 
 SCRIPT_NAME="${BASH_SOURCE[0]}"
-print_timestamp "$SCRIPT_NAME started"
+print_log "$SCRIPT_NAME started"
 
 install_jenkins_settings_scrapping() {
   local original_dir
   original_dir="$(pwd)"
 
   command="mvn clean install -Dmaven.home=\"$MAVEN_HOME\" -Dmaven.repo.local=\"$MAVEN_REPOSITORY\""
-  print_timestamp "$command"
+  print_log "$command"
   cd "$JENKINS_SETTINGS_SCRAPING_PATH"
   eval "$command"
 

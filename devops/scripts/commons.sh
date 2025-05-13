@@ -21,20 +21,15 @@ function get_timestamp {
     date +"%l:%M:%S:%3N%p"
 }
 
-function print_and_eval {
+function print_log_and_eval {
   local command=$1
-  echo "$(get_timestamp) .......... $command" >> "./../../$LOG_FILE"
+  echo "$(get_timestamp) .......... $command" >> "$LOG_FILE"
   eval "$command"
 }
 
-function print_to_file {
+function print_log {
   local command=$1
-  echo "$(get_timestamp) .......... $command" >> "./../../$LOG_FILE"
-}
-
-function print_timestamp() {
-  local command=$1
-  echo "$(get_timestamp) .......... $command" >> "./../../$LOG_FILE"
+  echo "$(get_timestamp) .......... $command" >> "$LOG_FILE"
 }
 
 function arrow_loader {
@@ -64,7 +59,7 @@ function is_container_running() {
     echo "false"
   fi
 
-  print_to_file "$container is running: $status"
+  print_log "$container is running: $status"
 }
 
 function validate_if_container_running() {

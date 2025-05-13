@@ -5,7 +5,7 @@ source ./commons.sh
 source ./variables.env
 
 SCRIPT_NAME="${BASH_SOURCE[0]}"
-print_timestamp "$SCRIPT_NAME started"
+print_log "$SCRIPT_NAME started"
 
 execute_jenkins_scrapping() {
   local operation=$1
@@ -16,7 +16,7 @@ execute_jenkins_scrapping() {
 
   export JAVA_HOME=$JAVA_HOME
   command="$JAVA_HOME/bin/java -Doperation=$operation -jar $JENKINS_SETTINGS_SCRAPING_JAR"
-  print_timestamp "$command"
+  print_log "$command"
   eval "$command"
 
   cd "$original_dir"

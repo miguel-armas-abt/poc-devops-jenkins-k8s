@@ -5,7 +5,7 @@ source ./commons.sh
 source ./variables.env
 
 SCRIPT_NAME="${BASH_SOURCE[0]}"
-print_timestamp "$SCRIPT_NAME started"
+print_log "$SCRIPT_NAME started"
 
 wait_for_container() {
   local container_name=$1
@@ -51,22 +51,22 @@ process_operation() {
 
     if [[ $operation == "build-image" ]]; then
       command="docker build -f $JENKINS_DOCKERFILE -t $image ."
-      print_and_eval "$command"
+      print_log_and_eval "$command"
     fi
 
     if [[ $operation == "up-compose" ]]; then
       #-d: in background
       command="docker-compose -f $JENKINS_DOCKER_COMPOSE_FILE up -d"
-      print_and_eval "$command"
+      print_log_and_eval "$command"
       command="docker network connect minikube $JENKINS_CONTAINER_NAME"
-      print_and_eval "$command"
+      print_log_and_eval "$command"
     fi
 
     if [[ $operation == "delete-compose" ]]; then
       command="docker network disconnect minikube $JENKINS_CONTAINER_NAME"
-      print_and_eval "$command"
+      print_log_and_eval "$command"
       command="docker-compose -f $JENKINS_DOCKER_COMPOSE_FILE down -v"
-      print_and_eval "$command"
+      print_log_and_eval "$command"
     fi
 
     if [[ $operation == "wait-container" ]]; then
