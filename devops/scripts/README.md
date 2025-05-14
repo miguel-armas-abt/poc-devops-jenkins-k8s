@@ -1,4 +1,4 @@
-> 📌 Utilice una shell compatible con Unix e instale `yq` para ejecutar los scripts `.sh`
+> 📌 Utilice una shell compatible con Unix e instale `yq` y `jq` para ejecutar los scripts `.sh`
 
 [← Regresar](../../README.md) <br>
 
@@ -14,6 +14,7 @@
 > 2. Configurar Jenkins mediante scraping
 > 3. Desinstalar Jenkins
 > 4. Generar Jenkinsfiles
+> 5. Crear pipeline
 >
 > ```shell script 
 > ./main.sh
@@ -21,4 +22,5 @@
 
 ---
 
-[chromedriver versions](https://googlechromelabs.github.io/chrome-for-testing/#stable)
+### 📌Referencias:
+- [chromedriver versions](https://googlechromelabs.github.io/chrome-for-testing/#stable)
